@@ -9,12 +9,10 @@ public class Flight {
     private String destination;
     private String departureTime;
     private String arrivalDateTime;
-    private String status; // e.g., "Scheduled", "Cancelled", "Completed"
+    private String status;
 
-    // Liste pour stocker les passagers associés au vol
     final private List<Passenger> passengerList = new ArrayList<>();
 
-    // Constructeur
     public Flight(String flightNumber, String origin, String destination, String departureTime,
                   String arrivalDateTime, String status) {
         this.flightNumber = flightNumber;
@@ -25,7 +23,6 @@ public class Flight {
         this.status = status;
     }
 
-    // Méthodes spécifiques
     public void planFlight() {
         this.status = "Scheduled";
         System.out.println("Flight " + flightNumber + " planned successfully.");
@@ -68,7 +65,6 @@ public class Flight {
         }
     }
 
-    // Getters et setters
     public String getFlightNumber() {
         return flightNumber;
     }
@@ -121,7 +117,6 @@ public class Flight {
         return passengerList;
     }
 
-    // Méthodes CRUD
     final private static List<Flight> flightList = new ArrayList<>();
 
     public static void createFlight(String flightNumber, String origin, String destination,
