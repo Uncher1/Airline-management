@@ -8,17 +8,14 @@ public class Aircraft {
     private String model;
     private int capacity;
 
-    // Liste pour stocker les vols assignés
     final private List<String> assignedFlights = new ArrayList<>();
 
-    // Constructeur
     public Aircraft(String registration, String model, int capacity) {
         this.registration = registration;
         this.model = model;
         this.capacity = capacity;
     }
 
-    // Méthodes spécifiques
     public void assignFlight(String flightNumber) {
         assignedFlights.add(flightNumber);
         System.out.println("Flight " + flightNumber + " assigned to aircraft " + registration);
@@ -28,7 +25,6 @@ public class Aircraft {
         return !assignedFlights.contains(flightNumber);
     }
 
-    // Getters et setters
     public String getRegistration() {
         return registration;
     }
@@ -57,7 +53,6 @@ public class Aircraft {
         return assignedFlights;
     }
 
-    // Méthodes CRUD
     final private static List<Aircraft> aircraftList = new ArrayList<>();
 
     public static void createAircraft(String registration, String model, int capacity) {
