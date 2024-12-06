@@ -8,23 +8,19 @@ public class Airport {
     private String city;
     private String description;
 
-    // Liste pour stocker les vols assignés à cet aéroport
     final private List<String> assignedFlights = new ArrayList<>();
 
-    // Constructeur
     public Airport(String name, String city, String description) {
         this.name = name;
         this.city = city;
         this.description = description;
     }
 
-    // Méthodes spécifiques
     public void assignFlight(String flightNumber) {
         assignedFlights.add(flightNumber);
         System.out.println("Flight " + flightNumber + " assigned to airport " + name);
     }
 
-    // Getters et setters
     public String getName() {
         return name;
     }
@@ -53,7 +49,6 @@ public class Airport {
         return assignedFlights;
     }
 
-    // Méthodes CRUD
     final private static List<Airport> airportList = new ArrayList<>();
 
     public static void createAirport(String name, String city, String description) {
