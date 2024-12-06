@@ -6,23 +6,19 @@ import java.util.List;
 public class StaffCabin extends Employee {
     private String qualification;
 
-    // Liste pour stocker les vols assignés
     final private List<String> assignedFlights = new ArrayList<>();
 
-    // Constructeur
     public StaffCabin(String id, String name, String address, String contact, String numberEmp,
                       String hiringDate, String qualification) {
         super(id, name, address, contact, numberEmp, hiringDate);
         this.qualification = qualification;
     }
 
-    // Méthode pour obtenir le rôle
     @Override
     public String getRole() {
         return "Staff Cabin";
     }
 
-    // Méthodes spécifiques
     public void assignFlight(String flightNumber) {
         assignedFlights.add(flightNumber);
         System.out.println("Flight " + flightNumber + " assigned to cabin staff " + getName());
@@ -32,7 +28,6 @@ public class StaffCabin extends Employee {
         return assignedFlights;
     }
 
-    // Getters et setters
     public String getQualification() {
         return qualification;
     }
@@ -41,7 +36,6 @@ public class StaffCabin extends Employee {
         this.qualification = qualification;
     }
 
-    // Méthodes CRUD
     final private static List<StaffCabin> staffCabinList = new ArrayList<>();
 
     public static void createStaffCabin(String id, String name, String address, String contact,
