@@ -8,14 +8,12 @@ public class Book {
     private String dateReservation;
     private String status; // e.g., "Confirmed", "Cancelled", "Pending"
 
-    // Constructeur
     public Book(String reservationNumber, String dateReservation, String status) {
         this.reservationNumber = reservationNumber;
         this.dateReservation = dateReservation;
         this.status = status;
     }
 
-    // Méthodes spécifiques
     public void confirmReservation() {
         if (!status.equals("Confirmed")) {
             status = "Confirmed";
@@ -39,7 +37,6 @@ public class Book {
         System.out.println("Reservation " + reservationNumber + " updated to new date: " + newDate);
     }
 
-    // Getters et setters
     public String getReservationNumber() {
         return reservationNumber;
     }
@@ -64,7 +61,6 @@ public class Book {
         this.status = status;
     }
 
-    // Méthodes CRUD
     final private static List<Book> bookList = new ArrayList<>();
 
     public static void createBook(String reservationNumber, String dateReservation, String status) {
