@@ -9,10 +9,8 @@ public class Person {
     private String address;
     private String contact;
 
-    // Liste statique pour stocker les instances de Person
     final private static List<Person> personList = new ArrayList<>();
 
-    // Constructeur
     public Person(String id, String name, String address, String contact) {
         this.id = id;
         this.name = name;
@@ -20,12 +18,10 @@ public class Person {
         this.contact = contact;
     }
 
-    // Méthode pour afficher les informations
     public String getInfos() {
         return "ID: " + id + "\nName: " + name + "\nAddress: " + address + "\nContact: " + contact;
     }
 
-    // Getters et setters
     public String getId() {
         return id;
     }
@@ -58,7 +54,6 @@ public class Person {
         this.contact = contact;
     }
 
-    // Méthodes CRUD
     public static void createPerson(String id, String name, String address, String contact) {
         Person person = new Person(id, name, address, contact);
         personList.add(person);
