@@ -6,7 +6,7 @@ import java.util.List;
 public class Book {
     private String reservationNumber;
     private String dateReservation;
-    private String status; // e.g., "Confirmed", "Cancelled", "Pending"
+    private String status;
 
     public Book(String reservationNumber, String dateReservation, String status) {
         this.reservationNumber = reservationNumber;
