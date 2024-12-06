@@ -7,19 +7,16 @@ public class Employee extends Person {
     private String numberEmp;
     private String hiringDate;
 
-    // Constructeur
     public Employee(String id, String name, String address, String contact, String numberEmp, String hiringDate) {
         super(id, name, address, contact);
         this.numberEmp = numberEmp;
         this.hiringDate = hiringDate;
     }
 
-    // Méthode pour obtenir le rôle de l'employé
     public String getRole() {
         return "Employee"; // Placeholder, sera redéfini dans les classes dérivées
     }
 
-    // Getters et setters
     public String getNumberEmp() {
         return numberEmp;
     }
@@ -36,7 +33,6 @@ public class Employee extends Person {
         this.hiringDate = hiringDate;
     }
 
-    // Méthodes CRUD
     final private static List<Employee> employeeList = new ArrayList<>();
 
     public static void createEmployee(String id, String name, String address, String contact, String numberEmp, String hiringDate) {
