@@ -6,16 +6,13 @@ import java.util.List;
 public class Passenger extends Person {
     private String passport;
 
-    // Liste pour stocker les réservations de vol
     final private List<String> bookedFlights = new ArrayList<>();
 
-    // Constructeur
     public Passenger(String id, String name, String address, String contact, String passport) {
         super(id, name, address, contact);
         this.passport = passport;
     }
 
-    // Méthodes spécifiques
     public void bookFlight(String flightNumber) {
         bookedFlights.add(flightNumber);
         System.out.println("Flight " + flightNumber + " booked for passenger " + getName());
@@ -33,7 +30,6 @@ public class Passenger extends Person {
         return bookedFlights;
     }
 
-    // Getters et setters
     public String getPassport() {
         return passport;
     }
@@ -42,7 +38,6 @@ public class Passenger extends Person {
         this.passport = passport;
     }
 
-    // Méthodes CRUD
     final private static List<Passenger> passengerList = new ArrayList<>();
 
     public static void createPassenger(String id, String name, String address, String contact, String passport) {
