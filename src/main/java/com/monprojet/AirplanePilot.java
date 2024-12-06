@@ -7,10 +7,8 @@ public class AirplanePilot extends Employee {
     private String license;
     private int flightHours;
 
-    // Liste pour stocker les vols assignés
     final private List<String> assignedFlights = new ArrayList<>();
 
-    // Constructeur
     public AirplanePilot(String id, String name, String address, String contact, String numberEmp,
                          String hiringDate, String license, int flightHours) {
         super(id, name, address, contact, numberEmp, hiringDate);
@@ -18,13 +16,11 @@ public class AirplanePilot extends Employee {
         this.flightHours = flightHours;
     }
 
-    // Méthode pour obtenir le rôle
     @Override
     public String getRole() {
         return "Airplane Pilot";
     }
 
-    // Méthodes spécifiques
     public void assignFlight(String flightNumber) {
         assignedFlights.add(flightNumber);
         System.out.println("Flight " + flightNumber + " assigned to pilot " + getName());
@@ -34,7 +30,6 @@ public class AirplanePilot extends Employee {
         return assignedFlights;
     }
 
-    // Getters et setters
     public String getLicense() {
         return license;
     }
@@ -51,7 +46,6 @@ public class AirplanePilot extends Employee {
         this.flightHours = flightHours;
     }
 
-    // Méthodes CRUD
     final private static List<AirplanePilot> pilotList = new ArrayList<>();
 
     public static void createAirplanePilot(String id, String name, String address, String contact,
