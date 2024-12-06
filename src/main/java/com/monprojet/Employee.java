@@ -14,7 +14,7 @@ public class Employee extends Person {
     }
 
     public String getRole() {
-        return "Employee"; // Placeholder, sera redéfini dans les classes dérivées
+        return "Employee";
     }
 
     public String getNumberEmp() {
