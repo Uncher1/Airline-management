@@ -6,7 +6,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
-        // Menu interactif
         while (running) {
             System.out.println("\n-- Airline Reservation System --");
             System.out.println("1. Create Person");
